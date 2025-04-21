@@ -1,144 +1,101 @@
-แน่นอนครับ! จากที่คุณระบุว่าต้องการสร้างเว็บไซต์อีคอมเมิร์ซที่ให้บริการเขียนเว็บทุกรูปแบบ โดยใช้ React, TypeScript, shadcn/ui และ Tailwind CSS ผมจะสร้างชุดข้อความ Prompt ใหม่ที่เน้นการผสมผสานระหว่างฟังก์ชันอีคอมเมิร์ซและการนำเสนอบริการพัฒนาเว็บไซต์นะครับ
+## ✅ PROMPT SET: E-commerce Web Dev Services (ภาษาอังกฤษสำหรับใช้กับ GPT)
 
-**ชุด Prompts Preset สำหรับพัฒนาเว็บไซต์ E-commerce + บริการเขียนเว็บ**
+### 1. **Header + Navigation**
+```txt
+Create a responsive Header component in React + TypeScript using shadcn/ui and TailwindCSS. It should include:
+- Logo (left)
+- Navigation links (center or hidden in mobile)
+- "Contact" and "Get a Quote" buttons (right)
+- Mobile menu with Hamburger icon
+Make it clean, modern, and easy to reuse.
+```
 
-**วัตถุประสงค์:** ชุด Prompt เหล่านี้ออกแบบมาเพื่อช่วยสร้างส่วนต่างๆ ของเว็บไซต์อีคอมเมิร์ซที่ให้บริการพัฒนาเว็บ โดยเน้นการใช้ React, TypeScript, shadcn/ui, และ Tailwind CSS
+---
 
-**1. Prompt: สร้างโครงสร้างโปรเจกต์ React + TypeScript พื้นฐาน**
+### 2. **Hero Section (Landing)**
+```txt
+Generate a HeroSection component in React + TypeScript using shadcn/ui + TailwindCSS. The hero should highlight:
+- "Custom Website Development Services"
+- Subtext like "From landing pages to full-stack web apps, we build it all."
+- CTA buttons: "View Services" + "Get a Quote"
+- Image or illustration area on the side (or top for mobile)
+Make it animated and engaging for first impression.
+```
 
-* **Prompt:**
-    สร้างโครงสร้างโฟลเดอร์และไฟล์พื้นฐานสำหรับโปรเจกต์ React ด้วย TypeScript โดยใช้ Vite เป็นเครื่องมือสร้าง (Build Tool) พร้อมตั้งค่า Tailwind CSS และ shadcn/ui เบื้องต้น โครงสร้างควรคำนึงถึงการแยกส่วนสำหรับฟังก์ชัน E-commerce (เช่น `products`, `cart`, `checkout`) และส่วนบริการ (เช่น `services`, `portfolio`) เพื่อการจัดการที่ง่ายในอนาคต
-* **คำอธิบาย:**
-    Prompt นี้มีเป้าหมายเพื่อสร้างโครงสร้างโปรเจกต์เริ่มต้นที่รองรับทั้งส่วนอีคอมเมิร์ซและส่วนบริการตามที่คุณต้องการ [source: 1] โดยใช้เทคโนโลยีที่กำหนด [source: 1] โครงสร้างนี้จะเป็นรากฐานสำหรับการพัฒนาคอมโพเนนต์และหน้าต่างๆ ต่อไป ผลลัพธ์ที่คาดหวังคือคำสั่งและขั้นตอนในการสร้างโปรเจกต์ Vite, ติดตั้ง Dependencies (Tailwind, shadcn/ui), และการตั้งค่าไฟล์ Config เบื้องต้น พร้อมตัวอย่างโครงสร้างโฟลเดอร์ที่เหมาะสม
+---
 
-**2. Prompt: สร้างส่วนประกอบ Header ที่ตอบสนอง (Responsive Header Component)**
+### 3. **ServiceCard Component**
+```txt
+Build a ServiceCard component in React + TypeScript using TailwindCSS + shadcn/ui. Each card should include:
+- Icon or emoji
+- Title (e.g. “Landing Page”, “E-commerce Website”)
+- Short description
+- Button: “Get Started”
+It should support a list of services and be responsive.
+```
 
-* **Prompt:**
-    เขียนโค้ด React Component สำหรับส่วน Header โดยใช้ TypeScript, shadcn/ui components (เช่น NavigationMenu, Button, ShoppingCart icon) และ Tailwind CSS ให้มีคุณสมบัติดังนี้:
-    1.  แสดงโลโก้ที่คลิกแล้วกลับหน้าแรก
-    2.  มีเมนูนำทาง (Navigation Menu) สำหรับหน้าต่างๆ (เช่น Home, Shop, Services, Portfolio, About, Contact, Blog) [source: 3]
-    3.  แสดงไอคอนตะกร้าสินค้า (Shopping Cart) พร้อมจำนวนสินค้า (ถ้ามี) และลิงก์ไปยังหน้าตะกร้าสินค้า
-    4.  มีปุ่ม Call-to-Action (CTA) สำหรับบริการ หรือ ปุ่ม Login/Account
-    5.  ตอบสนองต่อขนาดหน้าจอต่างๆ (Desktop, Tablet, Mobile) โดยใช้ Hamburger Menu สำหรับ Mobile [source: 3]
-    6.  ระบุสถานะ Active ของเมนูหน้าที่กำลังเปิดอยู่
-* **คำอธิบาย:**
-    Header เป็นส่วนสำคัญในการนำทางเว็บไซต์ที่รวมทั้งส่วนร้านค้าและบริการ [source: 3] Prompt นี้ต้องการสร้าง Header ที่รองรับฟังก์ชันทั้งสองส่วน โดยใช้ไลบรารีที่กำหนด [source: 1] เน้นการตอบสนอง (Responsive) และฟังก์ชันการทำงานพื้นฐาน เช่น การนำทาง, ไอคอนตะกร้าสินค้า, CTA/Login, และการแสดงผลบนมือถือ ผลลัพธ์ที่คาดหวังคือโค้ด React Component ของ Header ที่ปรับให้เหมาะกับเว็บ E-commerce + บริการ
+---
 
-**3. Prompt: สร้างส่วนประกอบ Hero Section สำหรับหน้าแรก**
+### 4. **ProductCard (ถ้าคิดแบบ Shop)**
+```txt
+Create a ProductCard component in React + TypeScript using shadcn/ui + TailwindCSS for displaying web services as if they are products. Include:
+- Thumbnail or service image
+- Title
+- Price (or "From $499")
+- Short description
+- Button: “Add to Cart” or “Customize”
+Make it clean and modern with hover effects.
+```
 
-* **Prompt:**
-    สร้าง React Component สำหรับส่วน Hero Section บนหน้าแรก (Homepage) โดยใช้ TypeScript และ Tailwind CSS ควรเน้นนำเสนอทั้งสองบริการหลัก:
-    1.  หัวข้อหลัก (Headline) ที่น่าสนใจ สื่อถึงการเป็นแพลตฟอร์มอีคอมเมิร์ซ และบริการพัฒนาเว็บไซต์
-    2.  ข้อความย่อย (Sub-headline) อธิบายจุดเด่นของสินค้า/บริการ
-    3.  ปุ่ม Call-to-Action (CTA) อย่างน้อย 2 ปุ่ม: ปุ่มหนึ่งนำไปสู่หน้า Shop และอีกปุ่มนำไปสู่หน้า Services/Contact [source: 3]
-    4.  (ทางเลือก) รูปภาพพื้นหลัง หรือ กราฟิกที่สื่อถึงเทคโนโลยีและการค้าออนไลน์
-    ออกแบบให้ตอบสนองต่อทุกขนาดหน้าจอ
-* **คำอธิบาย:**
-    Hero Section เป็นส่วนแรกที่ผู้ใช้เห็น [source: 1] และต้องสื่อสารคุณค่าของเว็บไซต์ได้อย่างรวดเร็ว Prompt นี้จะช่วยสร้าง Component ที่เน้นการนำเสนอทั้งส่วน E-commerce และบริการพัฒนาเว็บ ผลลัพธ์คือโค้ด React Component ที่สามารถนำไปวางในหน้าแรกได้ทันที
+---
 
-**4. Prompt: สร้างส่วนประกอบ Product Card สำหรับแสดงรายการสินค้า**
+### 5. **Portfolio / Project Showcase**
+```txt
+Generate a PortfolioSection component in React + TypeScript with TailwindCSS. It should:
+- Display past projects in a responsive grid
+- Include project name, image, brief summary
+- Modal or link for detailed view
+- Optional filter by category (e.g., “Landing”, “E-commerce”, “Dashboard”)
+```
 
-* **Prompt:**
-    เขียนโค้ด React Component ชื่อ `ProductCard` ด้วย TypeScript, shadcn/ui (เช่น Card, Button, AspectRatio) และ Tailwind CSS เพื่อแสดงข้อมูลสินค้าแต่ละรายการ ควรประกอบด้วย:
-    1.  รูปภาพสินค้า (ใช้ AspectRatio เพื่อขนาดที่สม่ำเสมอ)
-    2.  ชื่อสินค้า
-    3.  ราคาสินค้า
-    4.  (ทางเลือก) คะแนนรีวิว หรือ ป้ายกำกับ (เช่น "New", "Sale")
-    5.  ปุ่ม "Add to Cart" หรือ "View Details" ที่ทำงานได้ (รับฟังก์ชัน onClick หรือ ลิงก์ไปยังหน้ารายละเอียดสินค้า)
-    ทำให้ Card นี้สามารถนำไปใช้ซ้ำใน Grid Layout บนหน้า Shop ได้
-* **คำอธิบาย:**
-    หน้า Shop ต้องการการแสดงผลสินค้าที่น่าสนใจและใช้งานง่าย Prompt นี้จะช่วยสร้าง Card Component สำหรับสินค้าโดยเฉพาะ สามารถนำกลับมาใช้ซ้ำได้ เพื่อแสดงสินค้าต่างๆ อย่างเป็นระเบียบ ผลลัพธ์คือโค้ด React Component ของ `ProductCard` ที่รับ props (เช่น image, name, price, onAddToCart) เพื่อแสดงข้อมูลสินค้าที่แตกต่างกัน
+---
 
-**5. Prompt: สร้างส่วนประกอบ Service Card สำหรับแสดงรายการบริการ**
+### 6. **Cart Component**
+```txt
+Build a Cart component in React + TypeScript with shadcn/ui + TailwindCSS. It should include:
+- List of services/products added
+- Quantity control (if needed)
+- Price summary
+- Button: “Checkout”
+- Optional: promo code field
+Should work well as a side-drawer or modal.
+```
 
-* **Prompt:**
-    เขียนโค้ด React Component 'ServiceCard' ด้วย TypeScript, shadcn/ui (เช่น Card component) และ Tailwind CSS เพื่อแสดงข้อมูลบริการพัฒนาเว็บไซต์แต่ละรายการ ควรประกอบด้วย:
-    1.  ไอคอน หรือ รูปภาพแทนบริการ
-    2.  ชื่อบริการ (เช่น "Web Design", "E-commerce Development", "SEO Optimization")
-    3.  คำอธิบายสั้นๆ เกี่ยวกับบริการ [source: 1]
-    4.  ลิงก์ หรือ ปุ่ม "ดูรายละเอียด" หรือ "ติดต่อสอบถาม"
-    ทำให้ Card นี้สามารถนำไปใช้ซ้ำใน Grid Layout บนหน้า Services ได้
-* **คำอธิบาย:**
-    ส่วนบริการต้องการนำเสนอรูปแบบที่เข้าใจง่าย [source: 1] Prompt นี้จะช่วยสร้าง Card Component ที่นำกลับมาใช้ซ้ำได้ เพื่อแสดงบริการต่างๆ อย่างเป็นระเบียบและน่าสนใจ ผลลัพธ์คือโค้ด React Component ของ `ServiceCard` ที่สามารถรับ props เพื่อแสดงข้อมูลบริการที่แตกต่างกันได้ (คล้ายกับ Prompt เดิม แต่เน้นว่าเป็นส่วนของบริการ)
+---
 
-**6. Prompt: สร้างส่วนประกอบ Shopping Cart**
+### 7. **Checkout Page**
+```txt
+Design a CheckoutPage component using React + TypeScript with shadcn/ui + TailwindCSS. Include:
+- Billing details form (name, email, phone)
+- Payment method placeholder
+- Summary of items
+- Submit order button
+Use well-styled inputs and proper form validation UX.
+```
 
-* **Prompt:**
-    สร้าง React Component สำหรับหน้าตะกร้าสินค้า (Shopping Cart) โดยใช้ TypeScript, shadcn/ui (เช่น Table, Button, Input) และ Tailwind CSS ให้มีฟังก์ชันดังนี้:
-    1.  แสดงรายการสินค้าในตะกร้า (รูป, ชื่อ, ราคาต่อหน่วย, จำนวน, ราคารวมต่อรายการ) ในรูปแบบตาราง (Table) หรือ List
-    2.  อนุญาตให้ผู้ใช้ปรับจำนวนสินค้าแต่ละรายการ หรือ ลบสินค้าออกจากตะกร้า
-    3.  แสดงราคารวมย่อย (Subtotal) และราคารวมสุทธิ (Total)
-    4.  มีปุ่ม "Continue Shopping" และ "Proceed to Checkout" ที่ชัดเจน
-    5.  (ทางเลือก) แสดงช่องใส่โค้ดส่วนลด (Promo Code)
-    คอมโพเนนต์นี้ควรรับข้อมูลตะกร้าสินค้ามาจาก State Management
-* **คำอธิบาย:**
-    ตะกร้าสินค้าเป็นขั้นตอนสำคัญใน E-commerce Prompt นี้จะช่วยสร้าง UI สำหรับแสดงและจัดการสินค้าในตะกร้าก่อนไปยังหน้า Checkout ผลลัพธ์คือโค้ด React Component ของหน้าตะกร้าสินค้า ที่พร้อมเชื่อมต่อกับ State Management
+---
 
-**7. Prompt: สร้างส่วนประกอบ Checkout Form**
+### 8. **Reusable Section Layout**
+```txt
+Create a SectionWrapper component in React + TypeScript using TailwindCSS. It should:
+- Accept props: title, subtitle, children
+- Provide consistent padding and spacing
+- Optional: center/left alignment mode
+To wrap content like Services, Portfolio, etc.
+```
 
-* **Prompt:**
-    เขียนโค้ด React Component สำหรับหน้า Checkout โดยใช้ TypeScript, shadcn/ui components (เช่น Input, Select, RadioGroup, Button, Form, Stepper ถ้าต้องการแบ่งขั้นตอน) และ Tailwind CSS ให้มีส่วนประกอบหลักดังนี้:
-    1.  ส่วนกรอกข้อมูลที่อยู่จัดส่ง (Shipping Address)
-    2.  (ทางเลือก) ส่วนกรอกข้อมูลที่อยู่ใบกำกับภาษี (Billing Address) ถ้าต่างจากที่อยู่จัดส่ง
-    3.  ส่วนเลือกวิธีการจัดส่ง (Shipping Method)
-    4.  ส่วนเลือกวิธีการชำระเงิน (Payment Method) และกรอกข้อมูลการชำระเงิน (อาจจำลองส่วนนี้ก่อน หรือใช้ Integration กับ Payment Gateway)
-    5.  ส่วนสรุปรายการสั่งซื้อ (Order Summary) แสดงรายการสินค้า, ค่าจัดส่ง, ส่วนลด (ถ้ามี), และยอดรวมสุทธิ
-    6.  การตรวจสอบข้อมูล (Input Validation) ฝั่ง Client-side สำหรับทุกช่องที่จำเป็น [source: 4]
-    7.  การจัดการการส่งข้อมูล (Submission Handling) เพื่อสร้างคำสั่งซื้อ
-    8.  ปุ่ม "Place Order"
-* **คำอธิบาย:**
-    หน้า Checkout เป็นขั้นตอนสุดท้ายในการสั่งซื้อ Prompt นี้จะช่วยสร้างฟอร์มที่ซับซ้อนนี้ขึ้นมา โดยมีการแบ่งส่วนข้อมูลชัดเจน และมีการตรวจสอบข้อมูล [source: 4] เพื่อลดข้อผิดพลาด ผลลัพธ์คือโค้ด React Component ของหน้า Checkout พร้อม Logic การ Validation และการจัดการ Submission เบื้องต้น
+---
 
-**8. Prompt: สร้างส่วนประกอบ Portfolio Grid พร้อม Filter (สำหรับบริการ)**
-
-* **Prompt:**
-    สร้าง React Component สำหรับแสดงผลงานพัฒนาเว็บไซต์ (Portfolio) ในรูปแบบ Grid Layout โดยใช้ TypeScript และ Tailwind CSS พร้อมฟังก์ชันการกรอง (Filtering) ตามประเภทผลงาน (เช่น "E-commerce", "Corporate", "Landing Page") โดยใช้ shadcn/ui components (เช่น Button, Card):
-    1.  แสดงรูปย่อ (Thumbnail) ของแต่ละโปรเจกต์
-    2.  เมื่อคลิกที่รูปย่อ ควรแสดงรายละเอียดเพิ่มเติม (อาจเป็น Modal หรือ Link ไปยังหน้า Case Study)
-    3.  มีปุ่มสำหรับกรองผลงานตาม Category [source: 3] (การกรองควรเกิดขึ้นโดยไม่ต้องโหลดหน้าใหม่)
-    4.  (ทางเลือก) เพิ่ม Pagination หากมีผลงานจำนวนมาก [source: 4]
-* **คำอธิบาย:**
-    การแสดงผลงานบริการเป็นส่วนสำคัญในการสร้างความน่าเชื่อถือ [source: 1] Prompt นี้ต้องการสร้าง Portfolio Grid ที่โต้ตอบได้ ผู้ใช้สามารถกรองดูผลงานตามประเภทที่สนใจได้ง่าย [source: 3] ผลลัพธ์ที่คาดหวังคือโค้ด React Component ที่จัดการ state การกรองและแสดงผลงานตามเงื่อนไข (เหมือน Prompt เดิม แต่ระบุว่าเป็นส่วนของบริการ)
-
-**9. Prompt: สร้างส่วนประกอบ Contact Form (สำหรับบริการ)**
-
-* **Prompt:**
-    เขียนโค้ด React Component สำหรับแบบฟอร์มติดต่อ (Contact Form) เพื่อสอบถามเกี่ยวกับบริการพัฒนาเว็บไซต์ โดยใช้ TypeScript, shadcn/ui components (เช่น Input, Textarea, Button, Form) และ Tailwind CSS ให้มีคุณสมบัติดังนี้:
-    1.  ช่องกรอกข้อมูลที่จำเป็น (ชื่อ, อีเมล, เบอร์โทร, หัวข้อ/ประเภทบริการที่สนใจ, ข้อความ)
-    2.  การตรวจสอบข้อมูล (Input Validation) ฝั่ง Client-side (เช่น รูปแบบอีเมล, ช่องห้ามว่าง) [source: 4]
-    3.  การจัดการการส่งข้อมูล (Submission Handling) (ระบุฟังก์ชันที่จะเรียกใช้เมื่อกดส่ง)
-    4.  การแสดงผลตอบกลับให้ผู้ใช้ (Success/Error Message) [source: 4]
-    5.  (ทางเลือก) การป้องกัน Spam ด้วย reCAPTCHA [source: 4]
-* **คำอธิบาย:**
-    แบบฟอร์มติดต่อเป็นช่องทางหลักในการรับลูกค้าบริการ [source: 1, 4] Prompt นี้จะช่วยสร้างแบบฟอร์มที่ใช้งานได้จริง มีการตรวจสอบข้อมูล และให้ Feedback แก่ผู้ใช้ ผลลัพธ์คือโค้ด React Component ของ Contact Form พร้อม Logic การ Validation และการจัดการ Submission เบื้องต้น (เหมือน Prompt เดิม แต่เน้นว่าเป็นส่วนของบริการ)
-
-**10. Prompt: อธิบายการตั้งค่า Routing สำหรับโครงสร้าง E-commerce + บริการ**
-
-* **Prompt:**
-    อธิบายวิธีการตั้งค่า Client-side Routing ในโปรเจกต์ React โดยใช้ไลบรารี 'react-router-dom' เพื่อสร้างโครงสร้างเว็บไซต์หลายหน้าตามที่ระบุ (เช่น `/`, `/shop`, `/product/:productId`, `/cart`, `/checkout`, `/account`, `/services`, `/portfolio`, `/about`, `/contact`, `/blog`, `/blog/:slug`) [source: 1] พร้อมตัวอย่างโค้ดการกำหนด Route, Nested Routes (ถ้ามี เช่น ในหน้า Account), และการสร้าง Link สำหรับ Navigation Menu และปุ่มต่างๆ
-* **คำอธิบาย:**
-    เว็บไซต์นี้มีโครงสร้างหลายหน้าและซับซ้อน [source: 1] Prompt นี้ต้องการคำอธิบายและตัวอย่างโค้ดเกี่ยวกับวิธีการจัดการการเปลี่ยนหน้าระหว่าง Component ต่างๆ รวมถึงหน้า E-commerce และหน้าบริการ โดยใช้ React Router ผลลัพธ์คือคำอธิบายแนวคิดและตัวอย่างโค้ดการตั้งค่า Routes ที่ครอบคลุมทั้งสองส่วน
-
-**11. Prompt: อธิบายการจัดการ State สำหรับ E-commerce**
-
-* **Prompt:**
-    อธิบายและเปรียบเทียบแนวทางการจัดการ Global State สำหรับฟังก์ชัน E-commerce ในแอปพลิเคชัน React + TypeScript โดยพิจารณาเครื่องมือต่อไปนี้:
-    1.  React Context API + useReducer: สำหรับ State ที่ไม่ซับซ้อนมาก
-    2.  Zustand: สำหรับ State Management ที่เรียบง่ายและ Boilerplate น้อย
-    3.  Redux Toolkit: สำหรับ State Management ที่ซับซ้อนและต้องการ Scalability สูง
-    ยกตัวอย่างการจัดการ State ที่สำคัญ เช่น ข้อมูลตะกร้าสินค้า (Cart Items), สถานะการ Login ของผู้ใช้ (User Authentication), และ (ทางเลือก) รายการสินค้าที่ดึงมา (Product List) พร้อมตัวอย่างโค้ดเบื้องต้นสำหรับเครื่องมือที่แนะนำ
-* **คำอธิบาย:**
-    ฟังก์ชัน E-commerce เช่น ตะกร้าสินค้า และ การยืนยันตัวตน ต้องการการจัดการ State ที่เข้าถึงได้จากหลายคอมโพเนนต์ Prompt นี้ไม่ได้ต้องการโค้ด Component โดยตรง แต่ต้องการคำอธิบาย เปรียบเทียบ และตัวอย่างแนวทางการใช้ State Management Library ต่างๆ เพื่อจัดการข้อมูลส่วนกลางเหล่านี้อย่างมีประสิทธิภาพ ผลลัพธ์คือคำแนะนำในการเลือกใช้และตัวอย่างโค้ดเบื้องต้น
-
-**12. Prompt: สร้างโครงสร้างพื้นฐานสำหรับหน้า Blog และ Blog Post**
-
-* **Prompt:**
-    ออกแบบโครงสร้าง React Component และ State Management เบื้องต้นสำหรับหน้า Blog ที่แสดงรายการบทความทั้งหมด และหน้า Blog Post ที่แสดงเนื้อหาบทความเดียว โดยใช้ TypeScript และ Tailwind CSS ควรพิจารณา:
-    1.  การดึงข้อมูลบทความ (อาจจำลองข้อมูลขึ้นมาก่อน หรือระบุโครงสร้างข้อมูลที่คาดหวังจาก API)
-    2.  การแสดงรายการบทความพร้อมข้อมูลสรุป (ชื่อเรื่อง, วันที่, ผู้เขียน, บทคัดย่อ, รูปภาพ) บนหน้า Blog
-    3.  การแสดงเนื้อหาบทความเต็มรูปแบบบนหน้า Blog Post (ตาม slug หรือ ID) [source: 1]
-    4.  (ทางเลือก) การแบ่งประเภทบทความ (Categories) และฟังก์ชันค้นหา/กรองบทความ [source: 5]
-* **คำอธิบาย:**
-    ส่วน Blog ยังคงมีประโยชน์สำหรับ SEO และ Content Marketing [source: 1] Prompt นี้ต้องการโครงสร้างพื้นฐานสำหรับฟังก์ชัน Blog รวมถึงการแสดงรายการและการแสดงรายละเอียดบทความ ผลลัพธ์คือแนวทางการสร้าง Components (BlogListPage, BlogPostPage, ArticlePreviewCard) และการจัดการข้อมูลบทความเบื้องต้น (เหมือน Prompt เดิม)
-
-คุณสามารถเลือกใช้ Prompt เหล่านี้ตามลำดับ หรือเลือกเฉพาะส่วนที่ต้องการพัฒนาก่อนได้เลยครับ ชุด Prompt นี้พยายามครอบคลุมทั้งส่วน E-commerce และส่วนบริการ หากต้องการปรับแก้หรือเพิ่มเติมส่วนไหน แจ้งผมได้เลยนะครับ!
+## เทคนิคเสริม:
+- แต่ละ Prompt สามารถใส่ต่อท้ายว่า `Export as a reusable component with props.` เพื่อให้โค้ด reusable.
+- หากต้องการแบบ Interactive/Animated → ใส่ `Add subtle entrance animations using Framer Motion.`
