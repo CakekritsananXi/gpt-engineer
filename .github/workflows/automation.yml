@@ -1,0 +1,18 @@
+name: Automation Workflow
+
+on:
+  schedule:
+    - cron: '0 0 * * *' # รันทุกเที่ยงคืน
+  issues:
+    types: [opened, edited, reopened]
+
+jobs:
+  mark-stale-issues:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Mark stale issues
+        uses: actions/stale@v4
+        with:
+          stale-issue-message: 'This issue has been automatically marked as stale because it has not had recent activity. It will be closed if no further activity occurs.'
+          days-before-stale: 30
